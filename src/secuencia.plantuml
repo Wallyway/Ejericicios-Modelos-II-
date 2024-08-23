@@ -1,8 +1,0 @@
-@startuml Chisga
-skinparam Style strictuml
-skinparam SequenceMessageAlignment center
-
-A -> B: Hello world
-
-A<- B: hi
-@enduml

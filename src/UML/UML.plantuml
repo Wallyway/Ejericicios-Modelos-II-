@@ -1,0 +1,25 @@
+@startuml
+class Persona {
+  - int id
+  - String nombre
+  + int getId()
+  + String getNombre()
+}
+
+class Instrumento {
+  - int id
+  - String nombre
+  + int getId()
+  + String getNombre()
+}
+
+class Asignador {
+  - List<Persona> listaPersonas
+  - List<Instrumento> listaInstrumentos
+  + List<Persona> seleccionarPersonas()
+  + Map<Persona, Instrumento> asignarInstrumentos()
+}
+
+Asignador "1" *-- "n" Persona
+Asignador "1" *-- "n" Instrumento
+@enduml
