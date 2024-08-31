@@ -1,4 +1,4 @@
-improt random
+
 
 class Data:
 	def __init__(self):
