@@ -4,8 +4,6 @@ El patrón Factory Method es un patrón de diseño creacional que proporciona un
 
 ## 1. Patron Factory Method
 
-The workspace contains two folders by default, where:
-
 - En este código, el método `create_instrument()` en la clase  `InstrumentCreator()`actúa como el Factory Method. Permite crear instancias de objetos de tipo Instrument (ya sea un Guitarra o un violín) sin especificar su clase concreta directamente en el código cliente.
 
 ## 2. Características del Factory Method
