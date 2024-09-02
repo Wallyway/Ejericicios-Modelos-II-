@@ -7,6 +7,7 @@ from Musician import create_random_musicians
 class Main:
     def run(self):
         num_musicians = random.randint(5,10)
+        print("-------PERSONAS QUE ASISTEN: "f'{num_musicians}'"-----------\n")
         musicians = create_random_musicians(num_musicians)
         chisga = Band(musicians)
         print("------------AFINANDO-----------\n")
