@@ -3,7 +3,7 @@ from Instrument import Instrument
 
 class Violin(Instrument):
     def __init__(self):
-        self.instrument_type = 'Trompeta'
+        self.instrument_type = 'Violin'
         
 
     def play(self):
