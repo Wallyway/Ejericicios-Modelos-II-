@@ -1,5 +1,4 @@
 
-
 class Musician:
 	def __init__(self, name, instrument):
 		self.instrument = instrument
