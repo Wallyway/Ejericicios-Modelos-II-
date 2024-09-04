@@ -16,7 +16,6 @@ class Musician:
 
     def tune(self):
         print(f'{self.name} esta afinando', end=' ')
-
         self.instrument.tune()
 
         self.instrument.tune()
