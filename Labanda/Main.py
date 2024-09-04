@@ -1,5 +1,5 @@
-from Band import Band
 
+from Band import Band
 
 chisga = Band()
 chisga.random()

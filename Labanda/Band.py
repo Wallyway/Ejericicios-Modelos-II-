@@ -4,6 +4,7 @@ class Band:
     def __init__(self):
         self.musicians = []
 
+
     def play(self):
         for musician in self.musicians:
             musician.play()
@@ -20,3 +21,4 @@ class Band:
 	names = names[:rand_musicians]
 	self.musitians =  [Musician(name, instrumentf.random()) for name in names]
          
+

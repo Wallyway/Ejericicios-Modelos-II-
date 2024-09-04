@@ -5,3 +5,4 @@ class Instrument:
 
     def play(self):
         print(self.sound)
+

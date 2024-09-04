@@ -13,8 +13,6 @@ from Flute import Flute
 
 
 class InstrumentFactory:
-    def __init__(self):
-        pass
     
     def random(self):
         rand = random.randint(1,10)
