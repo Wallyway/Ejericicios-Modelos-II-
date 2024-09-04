@@ -1,13 +1,13 @@
-
 from Instrument import Instrument
 
 
-class Guitar(Instrument):
+class Piano(Instrument):
     def __init__(self):
-        self.instrument_type = 'Guitarra'
+        self.instrument_type = 'Piano'
 
     def play(self):
         print(f'{self.instrument_type}')
-
+        
     def tune(self):
-        print(f'{self.instrument_type}')
+        print(f'{self.instrument_type}')    
+	

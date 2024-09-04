@@ -2,10 +2,12 @@ from Instrument import Instrument
 
 
 class Violin(Instrument):
+    def __init__(self):
+        self.instrument_type = 'Violin'
+        
 
-
-    def __init__(self, sound):
-        super().__init__(sound)
-        print(f'{sound}')
-
-   
+    def play(self):
+        print(f'{self.instrument_type}')
+        
+    def tune(self):
+        print(f'{self.instrument_type}') 

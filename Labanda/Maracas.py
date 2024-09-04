@@ -1,13 +1,13 @@
 from Instrument import Instrument
 
 
+class Maracas(Instrument):
+    def __init__(self):
+        self.instrument_type = 'Maraca'
 
-class Maracas(Instrument):    
-    
-   def __init__(self, sound):
-      super().__init__(sound)
-      print(f'{sound}')
-
-
+    def play(self):
+        print(f'{self.instrument_type}')
+        
+    def tune(self):
+        print(f'{self.instrument_type}')    
 	
-
