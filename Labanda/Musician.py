@@ -2,7 +2,7 @@
 
 
 import random
-from InstrumentCreator import InstrumentCreator
+
 
 
 class Musician:
@@ -16,14 +16,10 @@ class Musician:
 
     def tune(self):
         print(f'{self.name} esta afinando', end=' ')
+
         self.instrument.tune()
 
-def generate_random_names(num_names):
-    names = ['Juan', 'Andres', 'Laura', 'David', 'Santiago', 'Pedro', 'Martin', 'Ana', 'Ivan', 'Julia']
-    random.shuffle(names)   #Aqui se evita repeticion de nombres por barjacion
-    return names[:num_names]
+        self.instrument.tune()
 
-def create_random_musicians(num_musicians):
-    names = generate_random_names(num_musicians)
-    instrument_creator = InstrumentCreator()
-    return [Musician(name, instrument_creator.create_instrument()) for name in names]
+
+

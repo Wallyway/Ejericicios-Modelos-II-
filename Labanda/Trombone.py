@@ -1,11 +1,7 @@
 from Instrument import Instrument
 
 
-class Violin(Instrument):
-
-
+class Trombone(Instrument):
     def __init__(self, sound):
         super().__init__(sound)
         print(f'{sound}')
-
-   
