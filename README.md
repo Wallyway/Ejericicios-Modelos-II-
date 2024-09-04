@@ -4,13 +4,14 @@ Este repositorio está dedicado a los ejercicios y proyectos relacionados con la
 
 ## Información del Curso
 
-- **Materia:** Modelos de Programación II
+- **Materia:** Modelos de Programación II (Gr.020-84)
 - **Período:** 2024-2
 - **Profesor:** Alejandro Paolo Daza Corredor
 
 ## Autores
 
-- Juan Sebastian Aparicio Wallis (Estudiante: 20232020140)
+- Juan Sebastian Aparicio Wallis (Cod.20232020140)
+- Brayan Sierra (Cod.20212020036)
 
 ## Descripción
 
