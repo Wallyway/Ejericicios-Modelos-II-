@@ -1,4 +1,6 @@
+from Instrument import Instrument
 
 
-class Guitar(:
-	def __init__(selfsou
+class Guitar(Instrument):
+    def __init__(self, sound):
+        self.__init__(sound)

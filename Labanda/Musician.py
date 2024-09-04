@@ -1,11 +1,12 @@
 class Musician:
-	def __init__(self, instrument, name):
-		self.instrument = instrument
-		self.name = name
-	
-	def tune(self):
-		print(self.name,"is tuning his instrument.")
-	
-	def play(self):
-		print(self.name,"is playing")
-		
+    def __init__(self, name, instrument):
+        self.name = name
+        self.instrument = instrument
+
+    def play(self):
+        print(f'{self.name} esta tocando', end=' ')
+        self.instrument.play()
+
+    def tune(self):
+        print(f'{self.name} esta afinando', end=' ')
+        self.instrument.tune()

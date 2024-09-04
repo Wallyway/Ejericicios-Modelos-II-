@@ -1,5 +1,8 @@
+# :p
+
+
 def recdivide(dividend, divider):
-    if dividend  == 0:
+    if dividend  < 1:
         return 0
     return 1 + recdivide(dividend-divider, divider)
 
@@ -17,7 +20,7 @@ def recmultiply(factor_a, factor_b):
 
 def secmultiply(factor_a, factor_b):
     result = 0
-    for i in range(abs(factor_a)):
+    for i in range(factor_a):
         result += factor_b
     return result
 
