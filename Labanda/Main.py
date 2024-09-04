@@ -1,9 +1,4 @@
 
-from Band import Band
-
-
-
-
 import random
 from Band import Band
 
@@ -21,4 +16,3 @@ class Main:
 
 if __name__ == "__main__":
     Main().run()
-
