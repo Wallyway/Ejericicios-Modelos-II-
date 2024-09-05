@@ -1,4 +1,4 @@
-from Labanda.Instrument import Instrument
+from Instrument import Instrument
 
 
 class Harp(Instrument):

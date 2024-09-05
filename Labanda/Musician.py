@@ -1,5 +1,6 @@
 import random
-from InstrumentCreator import InstrumentCreator
+from Instrument import Instrument
+from InstrumentFactory import InstrumentFactory
 
 
 class Musician:
@@ -8,10 +9,9 @@ class Musician:
         self.instrument = instrument
 
     def play(self):
-        print(f'{self.name} esta tocando...', end=' ')
+        print(self.name,"esta tocando...")
         self.instrument.play()
 
     def tune(self):
-        print(f'{self.name} esta afinando...', end=' ')
-        self.instrument.tune()
+        print(self.name,"esta afinando...")
 

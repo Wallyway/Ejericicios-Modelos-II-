@@ -2,11 +2,11 @@ import random
 from Accordion import Accordion
 from Guitar import Guitar
 from Instrument import Instrument
-from Labanda.Guitarron import Guitarron
-from Labanda.Harp import Harp
-from Labanda.Trombone import Trombone
+from Guitarron import Guitarron
+from Harp import Harp
+from Trombone import Trombone
 from Trumpet import Trumpet
-from Labanda.Vihuela import Vihuela
+from Vihuela import Vihuela
 from Maracas import Maracas
 from Violin import Violin
 from Flute import Flute

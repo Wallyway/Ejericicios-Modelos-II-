@@ -1,9 +1,8 @@
-
 from Band import Band
 
 chisga = Band()
 chisga.random()
-print("------------AFINANDO-----------\n")
+print("\n------------AFINANDO-----------\n")
 chisga.tune()
-print("------------TOCANDO-----------\n")
+print("\n------------TOCANDO-----------\n")
 chisga.play()
