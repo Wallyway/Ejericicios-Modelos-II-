@@ -13,6 +13,3 @@ Este repositorio está dedicado a los ejercicios y proyectos relacionados con la
 - Juan Sebastian Aparicio Wallis (Cod.20232020140)
 - Brayan Sierra (Cod.20212020036)
 
-## Descripción
-
-En este repositorio, encontrarás ejemplos, soluciones y prácticas relacionadas con los conceptos abordados en la materia.
