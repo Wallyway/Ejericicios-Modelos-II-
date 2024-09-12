@@ -1,11 +1,11 @@
 # Lazy Evaluation Workshop
 
 I. "multiply sum 4 3 subtract 6 2"
-	Abreviations:
+	### Abreviations:
 	- multiply as mlp
 	- subtract as sub
 
-	Evaluation:
+	### Evaluation:
 	1. mlp sum 4 3 sub 6 2
 	2. (sum 4 3)*(sub 6 2) <- "muliply"
 	3. (4 + 3)*(sub 6 2) <- "sum"
@@ -15,10 +15,10 @@ I. "multiply sum 4 3 subtract 6 2"
 	7. 28 <- "*"
 
 II. "factorial fibonacci sum 3 1"
-	Abrevations:
+	### Abrevations:
 	- factorial as fac
 	- fibonacci as fib
-	Notes:
+	### Notes:
 	 Para este caso se tomará en cuenta la definción clásica del fibonacci (0, 1, 1, 2...),
 	 lo que quiere decir que el cuarto número de la suceción es 2. Lo que quiere decir que "fibonacci 4" es igual a 2.
 
