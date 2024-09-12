@@ -30,23 +30,28 @@ II. "factorial fibonacci sum 3 1"
 
 	Evaluation:
 	1. fac fib sum 3 1
-	2. (fib sum 3 1)*fac((sib sum 3 1)-1)... <- "factorial"
-	3. (fib(sum 3 1 -1)+fib(sum 3 1 -2)*fac((fib sum 3 1)-1)... <- "fibonacci"
-	4. (fib(3+1 -1)+fib(sum 3 1 -2))*... <- "sum"
+	2. (fib sum 3 1)*fac((fib sum 3 1)-1)... <- "factorial"
+	3. (fib(sum 3 1 -1)+fib(sum 3 1 -2)*((fib sum 3 1)-1) <- "fibonacci"
+	4. (fib(3+1 -1)+fib(sum 3 1 -2))*(fib(3+1 -1)+fib(sum 3 1 -2)-1) <- "sum"
 	   .
 	   .
 	   .
-	   (fib(3+1 -1)+fib(3+1 -2))*...
-	   (fib(4 -1)+fib(3+1 -2))*... <- "+"
+	   (fib(3+1 -1)+fib(3+1 -2))*(fib(3+1 -1)+fib(sum 3 1 -2)-1)
+	   (fib(4 -1)+fib(3+1 -2))*(fib(4 -1)+fib(3+1 -2) - 1) <- "+"
 	   .
 	   .
 	   .
-	   (fib(4 -1)+fib(4 -2))*...
-	   (fib(3)+fib(4-2))*... <- "-"
+	   (fib(4 -1)+fib(4 -2))*(fib(4 -1)+fib(4 -2) - 1)
+	   (fib(3)+fib(4-2))*(fib(4-1)+fib(4-2) -1) <- "-"
 	   .
-	   . 	     
 	   .
-	   (fib(3)+fib(2))*...
-	   (1 + 1)*... <- "fibonacci"
-	   (2)*... <- "+"
+	   .
+	   (fib(3)+fib(2))*(fib(3)+fib(2) -1)
+	   (1 + fib(2))*(fib(3)+fib(2) -1) <- "fibonacci"
+	   .
+	   .
+	   .
+	   (1 + 1)*(1 + 1 -1)
+	   (2)*(2-1) <- "+"
+	   2*(1) <- "-"
 	   2 <- "*"
