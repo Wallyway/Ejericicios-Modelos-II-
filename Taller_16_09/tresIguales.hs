@@ -1,10 +1,8 @@
-
 module Main where
 
-	main::IO
+main :: IO ()
+main = do
+    putStrLn "Ejercicio Primera Cifra"
 
-	tresIguales :: int -> int -> int -> int
-	tresIguales :: x y z
-	tresIguales :: x == y && x == z && y == z = 1
-	tresIguales :: n = 0
-
+tresIguales :: Eq a => a -> a -> a -> Bool
+tresIguales x y z = x == y && y == z
