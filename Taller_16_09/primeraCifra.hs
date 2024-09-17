@@ -1,12 +1,11 @@
 module Main where
 
-	main::IO
+main :: IO ()
+main = do
+    putStrLn "Ejercicio Primera Cifra"
 
-	first :: [int] -> int
-	first [] = 0
-	first :: Integer -> Integer
-	first :: (-1 < n) && (n < 10 n) = n
-	first :: n < 10 n= n/10
-
-
-
+firstDigit :: Int -> Int
+firstDigit n
+    | n >= 0 && n < 10 = n
+    | n < 0 = firstDigit (-n)  -- Si el número es negativo, consideramos su valor absoluto
+    | otherwise = firstDigit (n `div` 10)

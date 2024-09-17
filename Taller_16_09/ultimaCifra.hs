@@ -1,8 +1,11 @@
 module Main where
 
-	main::IO
-    
-    last :: [int] -> int
-    last :: -1 < n && n < 10 n = n
-    last :: n > 9 n = n % 10
+main :: IO ()
+main = do
+    putStrLn "Ejercicio Ultima Cifra"
 
+lastDigit :: Int -> Int
+lastDigit n
+    | -1 < n && n < 10 = n
+    | n > 9 = n `mod` 10
+    | otherwise = error "Invalid input"
