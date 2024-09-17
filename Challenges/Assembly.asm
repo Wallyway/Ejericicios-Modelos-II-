@@ -1,18 +1,16 @@
-section .data
-    hello db 'Hello, World!', 0    ; The string to print, null-terminated
+global _start ; Declaración global de la etiqueta _start
 
-section .text
-    global main
+section .text ; Sección de código ejecutable
+_start:
+    mov rax, 1                              ; Cargar el número de sistema 1 en el registro rax (para la llamada al sistema write)
+    mov rdi, 1                              ; Cargar el descriptor de archivo 1 (stdout) en el registro rdi
+    mov rsi, message                        ; Cargar la dirección de la cadena "Hello, World!" en el registro rsi
+    mov rdx, 13                             ; Cargar la longitud de la cadena (13 caracteres) en el registro rdx
+    syscall                                 ; Llamar al sistema para escribir la cadena en la consola
 
-main:
-    ; Write the string to stdout
-    mov  rdx, 13                   ; Length of the string
-    mov  rcx, hello                ; Pointer to the string
-    mov  r8, 1                     ; Handle to the standard output (stdout)
-    mov  rax, 0                    ; Function code for "WriteConsoleA" (or you can call `syscall` with 0)
-    call printf                    ; Call printf function
-    
-    ; Exit the program
-    mov  rax, 60                   ; System call number for exit (sys_exit)
-    xor  rdi, rdi                  ; Exit code 0
-    syscall                        ; Call the kernel to exit
+    mov rax, 60                             ; Cargar el número de sistema 60 en el registro rax (para la llamada al sistema exit)
+    xor rdi, rdi                            ; Establecer el código de salida en 0 (en rdi)
+    syscall                                 ; Llamar al sistema para salir del programa
+
+section .data                               ; Sección de datos
+message: db "Hello, World!", 10             ; Definir la cadena "Hello, World!" seguida de un salto de línea (carácter 10)
