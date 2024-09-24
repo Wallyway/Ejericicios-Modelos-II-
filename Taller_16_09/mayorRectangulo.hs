@@ -1,5 +1,5 @@
 module Main where
-
+    
 main::IO()
 
 rectanguloMayor :: [Int] -> [Int] -> [Int]

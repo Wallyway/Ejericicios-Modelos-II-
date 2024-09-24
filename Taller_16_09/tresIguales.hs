@@ -1,8 +1,8 @@
-
 module Main where
 
-main::IO()
+main :: IO ()
+main = do
+    putStrLn "Ejercicio Tres iguales"
 
-tresIguales :: Eq int => int -> int -> int -> Bool
-tresIguales x y z = x == y && x == z && y == z
-main = putStrLn "Hello, this is tresIguales"
+tresIguales :: Eq a => a -> a -> a -> Bool
+tresIguales x y z = x == y && y == z
