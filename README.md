@@ -8,6 +8,12 @@ Este repositorio está dedicado a los ejercicios y proyectos relacionados con la
 - **Período:** 2024-2
 - **Profesor:** Alejandro Paolo Daza Corredor
 
+## Índice
+
+1. [Banda Aleatoria](Labanda/README.md)
+2. [Evaluación Peresoza](LazyEvaluation/workshop.md)
+3. [Taller 1 de Haskell](Taller_16_09/README.md)
+
 ## Autores
 
 - Juan Sebastian Aparicio Wallis (Cod.20232020140)

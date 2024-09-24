@@ -1,10 +1,8 @@
 
 module Main where
 
-	main::IO
+main::IO()
 
-	tresIguales :: int -> int -> int -> int
-	tresIguales :: x y z
-	tresIguales :: x == y && x == z && y == z = 1
-	tresIguales :: n = 0
-
+tresIguales :: Eq int => int -> int -> int -> Bool
+tresIguales x y z = x == y && x == z && y == z
+main = putStrLn "Hello, this is tresIguales"
