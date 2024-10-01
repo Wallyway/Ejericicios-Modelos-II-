@@ -1,14 +1,17 @@
 import random
 
 def cards(forms, values):
-    return [[form, value] for value in values for form in forms]
+    return [(form, value) for value in values for form in forms]
 
 def shuff(list):
     random.shuffle(list)
     return list
 
 def opt():
-    return bool(input())
+    if input() == '1':
+        return True
+    else:
+        return False
 
 def game(cards, result: int, vals):
     print(result)
@@ -22,5 +25,13 @@ def vals():
 def pocker():
     return cards(["club", "diamonds", "hearts", "spades"], ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'])
 
-#print(opt())    
-print(game(shuff(pocker()),0,()))
+# En desarrollo, ver si lo puede hacer de otra forma
+# Player and house are tuples
+# Retorno [player, house]
+# Player es la tupla ([cards], value)
+#def match(player, house, ):
+#    return []    
+
+print(game(shuff(pocker()),0,vals()))
+
+
