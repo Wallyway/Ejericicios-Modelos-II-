@@ -8,9 +8,10 @@ Esta es una simulación básica del juego de 21 (Blackjack) implementada en Pyth
 ## Tabla de Contenidos
 
 - [Descripción](#descripción)
+- [Lógica del Juego](#logica-del-juego)
+- [Interacción con el Usuario](#interacción-con-el-usuario)
+- [Flujo de Ejecucion](#flujo-de-ejecución)
 - [Instrucciones](#instrucciones)
-- [Estructura del Código](#estructura-del-código)
-- 
 
 
 ## Descripción
@@ -82,5 +83,5 @@ Para ejecutar el juego, asegúrate de tener Python instalado en tu sistema. Lueg
 
 1. Clona este repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/Wallyway/Ejericicios-Modelos-II-.git
    cd <NOMBRE_DEL_DIRECTORIO>
