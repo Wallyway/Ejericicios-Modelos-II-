@@ -46,6 +46,8 @@ def player_turn(list, player_hand):
         else player_turn(list[1:], add_card_to_hand(player_hand, list[0])) # Llamada recursiva para sacar una carta.
     )
 
+    
+
 def dealer_turn(list, dealer_hand):
     # Maneja el turno del dealer; el dealer saca cartas hasta que su mano sea al menos 17
     return (
@@ -54,12 +56,17 @@ def dealer_turn(list, dealer_hand):
     )
 
 def match(player_hand, dealer_hand, list):
-    # Realiza una ronda completa del juego.
-    final_player_hand = player_turn(list, player_hand) # Turno del jugador.
+    #Realiza una ronda completa del juego.
+   
     return (
-        final_player_hand,
-        dealer_turn(list[len(final_player_hand[0]):], dealer_hand)# Turno del dealer.
+        (lambda final_player_hand: (
+            final_player_hand,
+            dealer_turn(list [len(final_player_hand[0]):], dealer_hand)  # Turno del dealer.
+        ))(player_turn(list , player_hand))  # Turno del jugador.
     )
+  
+
+    
 
 def poker():
     # Crea un mazo completo de cartas.
@@ -88,6 +95,7 @@ def main():
             match(([], 0), ([], 0), shuffle(poker())  # Llama a match para obtener resultados.
          ))
     )  # Imprime las manos y determina el ganador.
+    
 
         
 
