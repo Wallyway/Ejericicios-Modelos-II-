@@ -13,6 +13,9 @@ Este repositorio está dedicado a los ejercicios y proyectos relacionados con la
 1. [Banda Aleatoria](Labanda/README.md)
 2. [Evaluación Peresoza](LazyEvaluation/workshop.md)
 3. [Taller 1 de Haskell](Taller_16_09/README.md)
+4. [Challenges](Challenges)
+5. [ComprehensionLists](comprehensionLists)
+5. [21](21/README.md)
 
 ## Autores
 
