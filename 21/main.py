@@ -83,9 +83,15 @@ def determine_winner(player_hand, dealer_hand):
 
 def main():
     # Punto de entrada del programa; ejecuta una ronda del juego e imprime resultados.
-    results = match(([], 0), ([], 0), shuffle(poker()))# Inicia el juego con manos vacías.
-    print_results(*results) # Imprime los resultados finales.
-    print(determine_winner(*results)) # Determina e imprime el ganador.
+    print(
+        (lambda results: (print_results(*results), determine_winner(*results)))(  # Llama a print_results y determine_winner en una sola línea.
+            match(([], 0), ([], 0), shuffle(poker())  # Llama a match para obtener resultados.
+         ))
+    )  # Imprime las manos y determina el ganador.
+
+        
+
 
 if __name__ == "__main__":
-    main()
+    main()  # Ejecuta la función principal para iniciar el juego.
+
