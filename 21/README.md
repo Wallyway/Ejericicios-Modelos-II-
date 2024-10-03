@@ -1,6 +1,3 @@
-# 21
-Aplicación del paradigma funcional a un juego de 21, consiste en un versus entre la casa (el casino) y un jugador (via terminal).
-
 # Simulación del Juego de 21 (Blackjack)
 
 Esta es una simulación básica del juego de 21 (Blackjack) implementada en Python. El programa permite a un jugador jugar contra un dealer, siguiendo las reglas estándar del Blackjack.
