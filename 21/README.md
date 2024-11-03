@@ -82,3 +82,4 @@ Para ejecutar el juego, asegúrate de tener Python instalado en tu sistema. Lueg
    ```bash
    git clone https://github.com/Wallyway/Ejericicios-Modelos-II-.git
    cd <NOMBRE_DEL_DIRECTORIO>
+``` 

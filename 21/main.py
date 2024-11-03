@@ -65,9 +65,6 @@ def match(player_hand, dealer_hand, list):
         ))(player_turn(list , player_hand))  # Turno del jugador.
     )
   
-
-    
-
 def poker():
     # Crea un mazo completo de cartas.
     return cards(["club", "diamonds", "hearts", "spades"], ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'])
@@ -96,10 +93,7 @@ def main():
          ))
     )  # Imprime las manos y determina el ganador.
     
-
-        
-
-
 if __name__ == "__main__":
     main()  # Ejecuta la función principal para iniciar el juego.
+
 
