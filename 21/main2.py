@@ -9,18 +9,18 @@ def shuff(list):
 
 def opt(previous):
     print("Digite 1 para continuar o 0 para parar: ")
-    if input() == '1':
-        return True == previous
+    if previous and input() == '1':
+        return True
     return False
 
 def rand(probabilty, previous):
     if random.random() > probabilty:
         return False 
-    return True == previous
+    return True and previous
 
-def play(player, card, fn):
+def play(player, card):
     if player[2]:
-        return (player[0]+card, player[1]+vals(card[0][1], player[1]), fn)
+        return (player[0]+card, player[1]+vals(card[0][1], player[1]))
     return player
 
 def vals(key, score):
@@ -40,11 +40,13 @@ def result(res):
     print("Tu puntaje:", res[0][1], ", tu mano:", res[0][0])
     print("Puntaje del dealer:", res[1][1], ", mano del dealer:",res[1][0])
 
-def match(player, dealer, cards):
+def preview(player):
     print("Tu mano:", player[0], "Tu puntaje:", player[1])
+    return (player[0],player[1], opt()
+
+def match(player, dealer, cards):
     if player[1] < 21 and dealer[1] < 21 and (dealer[2] or player[2]): 
-        return match(play(player, cards[:1], opt(player[2])), play(dealer, cards[1:2], rand(0.7, dealer[2])), cards[2:])
+        return match(preview(play(player, cards[:1])), play(dealer, cards[1:2], rand(0.7, dealer[2])), cards[2:])
     return [player, dealer]
 
 result(match(([], 0, True), ([], 0, True), shuff(pocker())))
-
