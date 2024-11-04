@@ -11,7 +11,8 @@ Este repositorio está dedicado a los ejercicios y proyectos relacionados con la
 3. [Taller 1 de Haskell](Taller_16_09)
 4. [Challenges (retos en haskell)](Challenges)
 5. [Lista por comprensión](comprehensionLists)
-5. [21 (Blackjack)](21)
+6. [21 (Blackjack)](21)
+7. [Laberinto](maze)
 
 ## Autores
 - Juan Sebastian Aparicio Wallis (Cod.20232020140)
