@@ -62,7 +62,7 @@ El cálculo del salario neto se realiza de acuerdo a las siguientes reglas:
 #### Fórmula para el salario neto:
 El salario neto se calcula con la siguiente fórmula:
 
-```Salario Neto = Salario Base - Deducción Salud - Deducción Pensión + Bonificación``
+```Salario Neto = Salario Base - Deducción Salud - Deducción Pensión + Bonificación```
 
 La bonificación depende de la categoría del docente:
 
