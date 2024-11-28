@@ -62,7 +62,7 @@ El cálculo del salario neto se realiza de acuerdo a las siguientes reglas:
 #### Fórmula para el salario neto:
 El salario neto se calcula con la siguiente fórmula:
 
-
+```Salario Neto = Salario Base - Deducción Salud - Deducción Pensión + Bonificación``
 
 La bonificación depende de la categoría del docente:
 
@@ -76,6 +76,8 @@ El sistema también realiza las deducciones correspondientes:
 
 Finalmente, el salario neto se obtiene restando las deducciones y sumando la bonificación:
 
+```Salario Neto = Salario Base - (Salario Base * 0.04) - (Salario Base * 0.04) + Bonificación```
+
 
 Por ejemplo, para un docente de categoría **auxiliar** con un salario base de 3,000,000:
 
@@ -85,4 +87,4 @@ Por ejemplo, para un docente de categoría **auxiliar** con un salario base de 3
 
 El cálculo del salario neto sería:
 
-
+```Salario Neto = 3,000,000 - 120,000 - 120,000 + 150,000 = 2,910,000```
