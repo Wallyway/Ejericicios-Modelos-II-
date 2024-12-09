@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <script>
+    function mySquare(listId, outId) {
+      document.getElementById(outId).innerHTML = "R: " + Array
+        .from(document.getElementById(listId).children)
+        .map( element => Number(element.innerHTML))
+        .reduce((accumulator, current) => accumulator + current*current )
+    } 
+  </script>
+  <body>
+    <h2>Your numbers ☕</h2>
+    <ul id="number-list">
+      <li>2</li>
+      <li>11</li>
+      <li>6</li>
+      <li>5</li>
+      <li>9</li>
+    </ul>
+    <h3>Result</h3>
+    <p>Here is the result of the sum of the squares of your numbers</p>
+    <p id="out">R: 0</p>
+    <button type="button" onclick="mySquare('number-list', 'out')">Sum</button>
+  </body>
+</html>

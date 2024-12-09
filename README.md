@@ -13,6 +13,7 @@ Este repositorio está dedicado a los ejercicios y proyectos relacionados con la
 5. [Lista por comprensión](comprehensionLists)
 6. [21 (Blackjack)](21)
 7. [Laberinto](maze)
+8. [Repaso](review)
 
 ## Autores
 - Juan Sebastian Aparicio Wallis (Cod.20232020140)
