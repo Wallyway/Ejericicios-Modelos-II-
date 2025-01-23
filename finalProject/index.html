@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prolog Database Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prolog Database Search</h1>
+
+        <!-- Search Form -->
+        <form id="searchForm">
+            <input type="text" id="searchName" placeholder="Search by name" name="name">
+            <input type="number" id="searchAge" placeholder="Search by age" name="age">
+            <select id="searchGender" name="gender">
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Results Section -->
+        <!-- <div id="results">
+            <h2>Search Results</h2>
+            <div id="resultsList"></div>
+        </div> -->
+        <div class="results-container">
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsList">
+                    <!-- Results will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Status Messages -->
+        <div id="status"></div>
+    </div>
+
+    <script>
+        // Search form handler
+        document.getElementById('searchForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('searchName').value;
+            const age = document.getElementById('searchAge').value;
+            const gender = document.getElementById('searchGender').value;
+    
+            let searchParams = new URLSearchParams();
+            if (name) searchParams.append('name', name);
+            if (age) searchParams.append('age', age);
+            if (gender) searchParams.append('gender', gender);
+    
+            try {
+                const response = await fetch(`/api/search?${searchParams}`);
+                if (!response.ok) throw new Error('Search failed');
+                const data = await response.json();
+                const resultsList = document.getElementById('resultsList');
+                resultsList.innerHTML = '';
+                
+                if (data.results && data.results.length > 0) {
+                    data.results.forEach(person => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${person.name}</td>
+                            <td>${person.age}</td>
+                            <td>${person.gender}</td>
+                        `;
+                        resultsList.appendChild(row);
+                    });
+                } else {
+                    resultsList.innerHTML = '<tr><td colspan="3">No results found</td></tr>';
+                }
+            } catch (error) {
+                document.getElementById('status').innerHTML = 'Error: ' + error.message;
+            }
+        });
+    </script>
+</body>
+</html>
