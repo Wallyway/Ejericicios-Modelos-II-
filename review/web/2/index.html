@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <script>
+      function products() {
+        return [
+          { name: "Guitar", price: 750 },
+          { name: "Piano", price: 1500 },
+          { name: "Drums", price: 1200 },
+          { name: "Flute", price: 300 },
+          { name: "Violin", price: 800 },
+          { name: "Microphone", price: 200 },
+          { name: "Speaker", price: 500 },
+          { name: "Amplifier", price: 600 },
+          { name: "Keyboard", price: 700 },
+          { name: "Harmonica", price: 150 }
+        ]
+      }
+
+      function myUpload(prods, wrapperId) {
+        document.getElementById("products-wrapper").innerHTML = prods
+          .map( product => `
+            <div>${product.name} - $${product.price}</div>`).join("")
+      } 
+     
+      function myInit() {
+        myUpload(products(), "products-wrapper")
+      }
+
+      function myFilter(wrapperId, inId) {
+        myUpload(products().filter( product =>
+          product.price < Number(document.getElementById(inId).value)), wrapperId)
+      }
+
+      document.addEventListener("DOMContentLoaded", myInit)
+    </script>
+  </head>
+  <body>
+    <label for="">Input the price:</label>
+    <input type="text" id="product-input" value="" placeholder="$">
+    <button type="button" onclick="myFilter('products-wrapper', 'product-input')">Filter</button>
+    <h3>Avaliable products:</h3>
+    <div id="products-wrapper"></div>
+  </body>
+</html>

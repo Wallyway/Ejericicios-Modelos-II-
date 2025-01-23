@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+      function mySort(id) {
+        Array.from(document.getElementById(id).children).sort((a, b) => {
+          const contentA = a.innerHTML.toUpperCase()
+          const contentB = b.innerHTML.toUpperCase()
+          if (contentA < contentB) return -1
+          if (contentA > contentB) return 1
+          return 0
+        }).forEach( child => document.getElementById(id).append(child))
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Salsa artists 🕺💃</h1>
+    <ul id="list-names">
+      <li>Joe Arroyo</li>
+      <li>Frakie Ruiz</li>
+      <li>Celia Cruz</li>
+      <li>Willie Colón</li>
+      <li>Héctor Lavoe</li>
+      <li>Rubén Blades</li>
+      <li>Giberto Santarosa</li>
+    </ul>  
+    <button type="button" onclick="mySort('list-names')">Sort</button>
+  </body>
+</html>
