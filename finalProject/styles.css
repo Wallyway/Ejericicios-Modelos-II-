@@ -1,4 +1,26 @@
-/* Add these styles to your existing CSS */
+/**
+ * Styles for the search results table and container
+ *
+ * .results-container - Wrapper for the table with horizontal scroll
+ *     - Sets top margin and handles overflow
+ *
+ * table - Main table element styling
+ *     - Full width with collapsed borders
+ *     - White background with subtle shadow
+ *
+ * th, td - Table cell styling
+ *     - Consistent padding and left alignment
+ *     - Light bottom border for separation
+ *
+ * th - Table header specific styles
+ *     - Light gray background
+ *     - Semi-bold font weight
+ *
+ * tr:hover - Row hover effect
+ *     - Light gray background on mouse hover
+ */
+
+
 .results-container {
     margin-top: 2rem;
     width: 100%;

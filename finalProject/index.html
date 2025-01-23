@@ -1,10 +1,40 @@
+<!--
+    Prolog Database Search Web Interface
+
+    This HTML document provides a web interface for searching a Prolog database.
+    It includes a search form with filters for name, age and gender, and displays
+    results in a table format.
+
+    Components:
+    - Search Form: Allows filtering by:
+        * Name (text input)
+        * Age (number input) 
+        * Gender (dropdown select - male/female)
+    
+    - Results Table: Displays search results with columns for:
+        * Name
+        * Age 
+        * Gender
+
+    - Status Messages: Shows error messages if search fails
+
+    JavaScript Functionality:
+    - Form submission handler using async/await
+    - Fetches data from '/api/search' endpoint with query parameters
+    - Dynamically renders results in table format
+    - Handles both successful searches and error cases
+    - Uses URLSearchParams for query string building
+
+    External Dependencies:
+    - Custom styles from styles.css
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prolog Database Search</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,11 +53,6 @@
             <button type="submit">Search</button>
         </form>
 
-        <!-- Results Section -->
-        <!-- <div id="results">
-            <h2>Search Results</h2>
-            <div id="resultsList"></div>
-        </div> -->
         <div class="results-container">
             <table id="resultsTable">
                 <thead>

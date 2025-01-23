@@ -28,8 +28,6 @@
  * - Debug modes enabled for search and add operations
  * - Automatic cleanup on server halt
  *
- * @author Unknown
- * @version 1.0
  */
 
 :- use_module(library(http/thread_httpd)).
