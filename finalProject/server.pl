@@ -76,33 +76,6 @@ search_handler(Request) :-
     debug(search, 'Found results: ~w', [Results]),
     reply_json(json{status: success, results: Results}).
 
-% Add person handler with validation
-% add_person_handler(Request) :-
-%     debug(add, 'Add request received', []),
-%     cors_enable,
-%     catch(
-%         (   http_read_json(Request, JSONIn),
-%             debug(add, 'Received JSON: ~w', [JSONIn]),
-            
-%             % Extract fields
-%             atom_json_term(JSONIn, json([name=Name, age=Age, gender=Gender]), []),
-            
-%             % Insert person using new predicate
-%             insert_person(Name, Age, Gender),
-            
-%             reply_json(json{status:success, message:'Person added successfully'}, 
-%                       [status(201)])
-%         ),
-%         Error,
-%         (   debug(add, 'Error adding person: ~w', [Error]),
-%             reply_json(json{status:error, message:'Failed to add person'},
-%                       [status(400)])
-%         )
-%     ).
-
-
-
-
 % Initialize server
 :- initialization(server(8080)).
 
