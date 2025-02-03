@@ -18,7 +18,7 @@
  *   - age: Number (exact match) 
  *   - gender: String (case-insensitive match)
  *
- * POST /api/add - Add new person (commented out in current version):
+ * POST /api/add - Add new person (PENDING)
  *   - name: String (required)
  *   - age: Number (required)
  *   - gender: String (required)
@@ -55,21 +55,23 @@ server(Port) :-
 :- http_handler('/api/add', add_person_handler, [method(post)]).
 
 % Search handler with multiple parameters
+   % Extract parameters from request
 search_handler(Request) :-
     debug(search, 'Search request received: ~w', [Request]),
     cors_enable,
     http_parameters(Request, [
-        name(Name, [optional(true)]),
-        age(Age, [optional(true), number]),
-        gender(Gender, [optional(true)])
+        name(Name, [optional(true)]),               % Optional name parameter
+        age(Age, [optional(true), number]),         % Optional age (must be number)
+        gender(Gender, [optional(true)])            % Optional gender parameter
     ]),
     debug(search, 'Search parameters - Name: ~w, Age: ~w, Gender: ~w', [Name, Age, Gender]),
     
-    findall(json{name:N, age:A, gender:G}, 
-        (person(N, A, G),
-         (var(Name) -> true ; sub_string(N, _, _, _, Name)),
-         (var(Age) -> true ; A = Age),
-         (var(Gender) -> true ; downcase_atom(G, GL), downcase_atom(Gender, GL))
+     % Search logic using findall
+    findall(json{name:N, age:A, gender:G},          % Create JSON objects
+        (person(N, A, G),                           % Match person facts
+         (var(Name) -> true ; sub_string(N, _, _, _, Name)),                        % Name contains search
+         (var(Age) -> true ; A = Age),                                              % Age exact match
+         (var(Gender) -> true ; downcase_atom(G, GL), downcase_atom(Gender, GL))    % Gender match (case insensitive)
         ),
         Results),
     
