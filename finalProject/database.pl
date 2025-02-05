@@ -1,3 +1,5 @@
+:- dynamic product/3.
+
 product('Apple', 1800, 'Food').
 product('Banana', 2000, 'Food').
 product('Bread', 3500, 'Food').
@@ -18,3 +20,6 @@ product('Laundry Detergent', 18000, 'Cleaning').
 product('Sponges', 4000, 'Cleaning').
 product('Paper Towels', 5500, 'Cleaning').
 product('Trash Bags', 7500, 'Cleaning').
+product('Gomitas', 2333, 'Food').
+product('Sopa', 53424, 'Food').
+product('Hamburguesa', 10000, 'Food').

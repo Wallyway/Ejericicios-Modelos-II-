@@ -37,6 +37,7 @@
 :- use_module(library(http/http_parameters)).
 :- use_module(library(http/http_files)).
 :- use_module(library(debug)).
+:- dynamic product/3.
 :- consult('database.pl').
 
 % Enable debugging
