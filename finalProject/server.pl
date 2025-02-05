@@ -30,7 +30,7 @@
  *
  */
 
-:- use_module(library(http/thread_httpd)).
+ :- use_module(library(http/thread_httpd)).
 :- use_module(library(http/http_dispatch)).
 :- use_module(library(http/http_json)).
 :- use_module(library(http/http_cors)).
@@ -61,17 +61,17 @@ search_handler(Request) :-
     cors_enable,
     http_parameters(Request, [
         name(Name, [optional(true)]),               % Optional name parameter
-        age(Age, [optional(true), number]),         % Optional age (must be number)
-        gender(Gender, [optional(true)])            % Optional gender parameter
+        age(Price, [optional(true), number]),         % Optional age (must be number)
+        gender(Category, [optional(true)])            % Optional gender parameter
     ]),
-    debug(search, 'Search parameters - Name: ~w, Age: ~w, Gender: ~w', [Name, Age, Gender]),
+    debug(search, 'Search parameters - Name: ~w, Price: ~w, Category: ~w', [Name, Price, Category]),
     
      % Search logic using findall
     findall(json{name:N, age:A, gender:G},          % Create JSON objects
-        (person(N, A, G),                           % Match person facts
+        (product(N, A, G),                           % Match person facts
          (var(Name) -> true ; sub_string(N, _, _, _, Name)),                        % Name contains search
-         (var(Age) -> true ; A = Age),                                              % Age exact match
-         (var(Gender) -> true ; downcase_atom(G, GL), downcase_atom(Gender, GL))    % Gender match (case insensitive)
+         (var(Price) -> true ; A = Price),                                              % Age exact match
+         (var(Category) -> true ; downcase_atom(G, GL), downcase_atom(Category, GL))    % Gender match (case insensitive)
         ),
         Results),
     

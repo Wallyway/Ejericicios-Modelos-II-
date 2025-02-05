@@ -1,43 +1,20 @@
-% database.pl
-person('Alice', 30, 'Female').
-person('Bob', 25, 'Male').
-person('Charlie', 30, 'Male').
-person('Dana', 28, 'Female').
-person('Eve', 22, 'Female').
-person('Frank', 40, 'Male').
-person('wally', 22, 'male').
-person('Alex', 34, 'male').
-person('Jhonatan', 13, 'male').
-person('Hank', 50, 'Male').
-person('Ivy', 27, 'Female').
-person('Jack', 33, 'Male').
-person('Karen', 29, 'Female').
-person('Leo', 38, 'Male').
-person('Mona', 31, 'Female').
-person('Nate', 42, 'Male').
-person('Olivia', 26, 'Female').
-person('Paul', 48, 'Male').
-person('Rachel', 37, 'Female').
-person('Steve', 41, 'Male').
-person('Tina', 30, 'Female').
-person('Uma', 29, 'Female').
-person('Victor', 36, 'Male').
-person('Wendy', 43, 'Female').
-person('Xander', 39, 'Male').
-person('Yara', 28, 'Female').
-person('Zack', 44, 'Male').
-person('Amy', 31, 'Female').
-person('Ben', 27, 'Male').
-person('Cara', 33, 'Female').
-person('Dave', 46, 'Male').
-person('Ella', 29, 'Female').
-person('Finn', 32, 'Male').
-person('Gina', 40, 'Female').
-person('Hugo', 35, 'Male').
-person('Isla', 30, 'Female').
-person('Jake', 38, 'Male').
-person('Kira', 28, 'Female').
-person('Liam', 42, 'Male').
-person('Mia', 31, 'Female').
-person('Noah', 37, 'Male').
-person('Opal', 34, 'Female').
+product('Apple', 1800, 'Food').
+product('Banana', 2000, 'Food').
+product('Bread', 3500, 'Food').
+product('Milk', 5000, 'Food').
+product('Rice', 5000, 'Food').
+product('Eggs', 15000, 'Food').
+product('Cheese', 8000, 'Food').
+product('Chicken', 12000, 'Food').
+product('Tomatoes', 3000, 'Food').
+product('Pasta', 4200, 'Food').
+product('Vanish', 12000, 'Cleaning').
+product('Bleach', 8500, 'Cleaning').
+product('Soap', 3500, 'Cleaning').
+product('Window Cleaner', 6000, 'Cleaning').
+product('Floor Cleaner', 9500, 'Cleaning').
+product('Dish Soap', 6000, 'Cleaning').
+product('Laundry Detergent', 18000, 'Cleaning').
+product('Sponges', 4000, 'Cleaning').
+product('Paper Towels', 5500, 'Cleaning').
+product('Trash Bags', 7500, 'Cleaning').
