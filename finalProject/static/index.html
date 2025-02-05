@@ -1,33 +1,38 @@
-
 <!--
-    Prolog Database Search Web Interface
+    Store Product Management Interface
 
-    This HTML document provides a web interface for searching a Prolog database.
-    It includes a search form with filters for name, age and gender, and displays
-    results in a table format.
+    This HTML document provides a web interface for managing a store's product database.
+    It includes both search and add functionality for products, displaying results in 
+    a table format.
 
     Components:
-    - Search Form: Allows filtering by:
+    - Search Form: Allows filtering products by:
         * Name (text input)
-        * Age (number input) 
-        * Gender (dropdown select - male/female)
+        * Price (number input) 
+        * Category (dropdown select - Food/Cleaning)
     
-    - Results Table: Displays search results with columns for:
-        * Name
-        * Age 
-        * Gender
+    - Add Product Form: Allows adding new products with:
+        * Name (text input)
+        * Price (number input)
+        * Category (dropdown select - Food/Cleaning)
 
-    - Status Messages: Shows error messages if search fails
+    - Results Table: Displays products with columns for:
+        * Name
+        * Price 
+        * Category
+
+    - Status Messages: Shows feedback messages for operations
 
     JavaScript Functionality:
-    - Form submission handler using async/await
-    - Fetches data from '/api/search' endpoint with query parameters
-    - Dynamically renders results in table format
-    - Handles both successful searches and error cases
-    - Uses URLSearchParams for query string building
+    - Form submission handlers for both search and add operations
+    - Integration with backend API endpoints
+    - Dynamic table rendering for search results
+    - Input validation and error handling
+    - Real-time updates of product listing
 
     External Dependencies:
-    - Custom styles from styles.css
+    - styles.css for custom styling
+    - search.js for functionality implementation
 -->
 
 <!DOCTYPE html>
@@ -54,7 +59,7 @@
                 <button type="submit">Search</button>
             </form>
 
-            <!-- Add this after your search form in index.html -->
+            <!-- Add Form -->
             <div class="add-product-section">
                 <h2>Add New Product</h2>
                 <form id="addProductForm">
