@@ -30,7 +30,7 @@
  *
  */
 
- :- use_module(library(http/thread_httpd)).
+:- use_module(library(http/thread_httpd)).
 :- use_module(library(http/http_dispatch)).
 :- use_module(library(http/http_json)).
 :- use_module(library(http/http_cors)).
@@ -49,6 +49,7 @@ server(Port) :-
 
 % Serve static files
 :- http_handler('/', http_reply_from_files('.', []), [prefix]).
+:- http_handler('/static/', http_reply_from_files('static', []), [prefix]).
 
 % Define routes with methods
 :- http_handler('/api/search', search_handler, [method(get)]).
@@ -77,6 +78,42 @@ search_handler(Request) :-
     
     debug(search, 'Found results: ~w', [Results]),
     reply_json(json{status: success, results: Results}).
+
+
+
+% Add a new predicate to reload the database
+reload_database :-
+    retractall(product(_, _, _)),
+    consult('database.pl').
+
+% Modify the assert_product predicate
+assert_product(Name, Price, Category) :-
+    open('database.pl', append, Stream),
+    format(Stream, '~nproduct(\'~w\', ~w, \'~w\').', [Name, Price, Category]),
+    close(Stream),
+    reload_database.
+
+% Update the add_person_handler
+add_person_handler(Request) :-
+    debug(add, 'Add product request received', []),
+    cors_enable,
+    http_read_json_dict(Request, Data),
+    
+    % Extract data from the JSON request
+    Name = Data.name,
+    Price = Data.price,
+    Category = Data.category,
+    
+    % Validate data
+    string(Name),
+    number(Price),
+    string(Category),
+    
+    % Add the product and reload database
+    assert_product(Name, Price, Category),
+    
+    % Return success response
+    reply_json(json{status: success, message: 'Product added successfully'}).
 
 % Initialize server
 :- initialization(server(8080)).

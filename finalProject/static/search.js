@@ -34,4 +34,35 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('status').innerHTML = 'Error: ' + error.message;
         }
     });
+
+    document.getElementById('addProductForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const productData = {
+            name: document.getElementById('productName').value,
+            price: parseInt(document.getElementById('productPrice').value),
+            category: document.getElementById('productCategory').value
+        };
+    
+        try {
+            const response = await fetch('/api/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(productData)
+            });
+    
+            if (!response.ok) throw new Error('Failed to add product');
+            const result = await response.json();
+            
+            if (result.status === 'success') {
+                document.getElementById('status').innerHTML = 'Product added successfully';
+                document.getElementById('addProductForm').reset();
+            } else {
+                throw new Error(result.message || 'Failed to add product');
+            }
+        } catch (error) {
+            document.getElementById('status').innerHTML = 'Error: ' + error.message;
+        }
+    });
 });

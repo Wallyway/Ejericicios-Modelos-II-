@@ -1,3 +1,4 @@
+
 <!--
     Prolog Database Search Web Interface
 
@@ -39,19 +40,34 @@
     </head>
     <body>
         <div class="container">
-            <h1>Prolog Database Search</h1>
+            <h1>My store</h1>
 
             <!-- Search Form -->
             <form id="searchForm">
                 <input type="text" id="searchName" placeholder="Search by name" name="name">
                 <input type="number" id="searchAge" placeholder="Search by price" name="age">
                 <select id="searchGender" name="gender">
-                    <option value="">Select gender</option>
+                    <option value="">Select category</option>
                     <option value="Food">Food</option>
                     <option value="Cleaning">Cleaning</option>
                 </select>
                 <button type="submit">Search</button>
             </form>
+
+            <!-- Add this after your search form in index.html -->
+            <div class="add-product-section">
+                <h2>Add New Product</h2>
+                <form id="addProductForm">
+                    <input type="text" id="productName" placeholder="Product name" required>
+                    <input type="number" id="productPrice" placeholder="Price" required>
+                    <select id="productCategory" required>
+                        <option value="">Select category</option>
+                        <option value="Food">Food</option>
+                        <option value="Cleaning">Cleaning</option>
+                    </select>
+                    <button type="submit">Add Product</button>
+                </form>
+            </div>
 
             <div class="results-container">
                 <table id="resultsTable">
