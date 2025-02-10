@@ -1,98 +1,125 @@
-<!--
-    Store Product Management Interface
-
-    This HTML document provides a web interface for managing a store's product database.
-    It includes both search and add functionality for products, displaying results in 
-    a table format.
-
-    Components:
-    - Search Form: Allows filtering products by:
-        * Name (text input)
-        * Price (number input) 
-        * Category (dropdown select - Food/Cleaning)
-    
-    - Add Product Form: Allows adding new products with:
-        * Name (text input)
-        * Price (number input)
-        * Category (dropdown select - Food/Cleaning)
-
-    - Results Table: Displays products with columns for:
-        * Name
-        * Price 
-        * Category
-
-    - Status Messages: Shows feedback messages for operations
-
-    JavaScript Functionality:
-    - Form submission handlers for both search and add operations
-    - Integration with backend API endpoints
-    - Dynamic table rendering for search results
-    - Input validation and error handling
-    - Real-time updates of product listing
-
-    External Dependencies:
-    - styles.css for custom styling
-    - search.js for functionality implementation
--->
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My store</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1>My store</h1>
 
-            <!-- Search Form -->
-            <form id="searchForm">
-                <input type="text" id="searchName" placeholder="Search by name" name="name">
-                <input type="number" id="searchAge" placeholder="Search by price" name="age">
-                <select id="searchGender" name="gender">
-                    <option value="">Select category</option>
-                    <option value="Food">Food</option>
-                    <option value="Cleaning">Cleaning</option>
-                </select>
-                <button type="submit">Search</button>
-            </form>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>biShop</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="search.js" defer></script>
+  <script src="product.js" defer></script>
+  <script src="https://kit.fontawesome.com/e380a059f2.js" crossorigin="anonymous"></script>
+</head>
 
-            <!-- Add Form -->
-            <div class="add-product-section">
-                <h2>Add New Product</h2>
-                <form id="addProductForm">
-                    <input type="text" id="productName" placeholder="Product name" required>
-                    <input type="number" id="productPrice" placeholder="Price" required>
-                    <select id="productCategory" required>
-                        <option value="">Select category</option>
-                        <option value="Food">Food</option>
-                        <option value="Cleaning">Cleaning</option>
-                    </select>
-                    <button type="submit">Add Product</button>
-                </form>
-            </div>
+<body>
+  <header>
+    <h1>biShop</h1>
+  </header>
+  <nav>
+    <a href="/billing">Billing</a>
+    <a href="/product_crud">Admin</a>
+  </nav>
+  <main class="">
+    <section class="container">
+      <h2>Search</h2>
+      <form id="searchForm">
+        <input type="text" id="searchName" placeholder="Search by name" name="name">
+        <input type="number" id="searchAge" placeholder="Search by price" name="age">
+        <select id="searchGender" name="gender">
+          <option value="">Select category</option>
+          <option value="Food">Food</option>
+          <option value="Cleaning">Cleaning</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+      <div class="results-container">
+        <table id="resultsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Add</th>
+            </tr>
+          </thead>
+          <tbody id="resultsList">
+            <tr>
+              <td>e.g. name</td>
+              <td>1</td>
+              <td>cat</td>
+              <td>
+                <button type="button" class="cart-btn">
+                  <i class="fa-solid fa-cart-shopping"
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-            <div class="results-container">
-                <table id="resultsTable">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Category</th>
-                        </tr>
-                    </thead>
-                    <tbody id="resultsList">
-                        <!-- Results will be dynamically inserted here -->
-                    </tbody>
-                </table>
-            </div>
+      <div class="add-product-section">
+        <h2>Add New Product</h2>
+        <form id="addProductForm">
+          <input type="text" id="productName" placeholder="Product name" required>
+          <input type="number" id="productPrice" placeholder="Price" required>
+          <select id="productCategory" required>
+            <option value="">Select category</option>
+            <option value="Food">Food</option>
+            <option value="Cleaning">Cleaning</option>
+          </select>
+          <button type="submit">Add Product</button>
+        </form>
+      </div>
+      <div id="status"></div>
+    </section>
+    <section class="container">
+      <h2>Billing</h2> 
+      <table id="billingTbl">
+        <thead>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Add</th>
+          <th>Remove</th>
+          <th>Delete</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product</td>
+            <td>3</td>
+            <td>20000</td>
+            <td>
+              <button type="button" class="add-btn">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </td>
+            <td>
+              <button type="button" class="take-off-btn">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+            </td>
+            <td>
+              <button type="button" class="remove-btn">
+                <i class= "fa-solid fa-xmark"
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>16</td>
+            <td>$80</td>
+          </tr>
+        </tfoot>
+      </table>
+     <button id="billingBtn" type="submit">Invoce</button>
+    </section>
 
-            <!-- Status Messages -->
-            <div id="status"></div>
-        </div>
+  </main>
+  <footer>
+    Hecho con amor <3
+  </footer>
+</body>
 
-        <script src="search.js"></script>
-    </body>
 </html>

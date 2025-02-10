@@ -23,3 +23,4 @@ product('Trash Bags', 7500, 'Cleaning').
 product('Gomitas', 2333, 'Food').
 product('Sopa', 53424, 'Food').
 product('Hamburguesa', 10000, 'Food').
+product('banana', 2000, 'Cleaning').

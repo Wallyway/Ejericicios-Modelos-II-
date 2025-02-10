@@ -1,10 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('searchForm').addEventListener('submit', async (e) => {
+document.addEventListener('DOMContentLoaded', () => {    
+  console.log("Hello")
+});
+
+document.getElementById('searchForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const name = document.getElementById('searchName').value;
         const age = document.getElementById('searchAge').value;
         const gender = document.getElementById('searchGender').value;
-
         let searchParams = new URLSearchParams();
         if (name) searchParams.append('name', name);
         if (age) searchParams.append('age', age);
@@ -33,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             document.getElementById('status').innerHTML = 'Error: ' + error.message;
         }
-    });
+});
 
-    document.getElementById('addProductForm').addEventListener('submit', async (e) => {
+document.getElementById('addProductForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         const productData = {
             name: document.getElementById('productName').value,
@@ -65,4 +67,4 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('status').innerHTML = 'Error: ' + error.message;
         }
     });
-});
+

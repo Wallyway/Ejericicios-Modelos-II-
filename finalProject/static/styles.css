@@ -23,128 +23,139 @@
 
 /* General styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 .container {
-    max-width: 800px; 
-    margin: 0 auto;
-    padding: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 90%;
 }
 
 h1 {
-    color: #4caf50;
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 2.5rem;
+  color: #4caf50;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2.5rem;
 }
 
 /* Container for results */
 .results-container {
-    margin-top: 2rem;
-    width: 100%;
-    overflow-x: auto;
-    padding: 1rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  overflow-x: auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Table styles */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #4caf50;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
+  background-color: #4caf50;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 tr:hover {
-    background-color: #d1e7dd;
-    cursor: pointer;
+  background-color: #d1e7dd;
+  cursor: pointer;
 }
 
 /* Button styles */
 button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 /* Input styles */
-input[type="text"], input[type="number"], select {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-input[type="text"]:focus, input[type="number"]:focus, select:focus {
-    border-color: #4caf50;
-    outline: none;
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #4caf50;
+  outline: none;
 }
 
 .add-product-section {
-    margin-top: 2rem;
-    padding: 1rem;
-    border-top: 1px solid #ccc;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
 }
 
 #addProductForm {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 #addProductForm input,
 #addProductForm select {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 #addProductForm button {
-    padding: 0.5rem 1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 #addProductForm button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
