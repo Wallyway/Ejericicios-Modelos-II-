@@ -24,3 +24,8 @@ product('Gomitas', 2333, 'Food').
 product('Sopa', 53424, 'Food').
 product('Hamburguesa', 10000, 'Food').
 product('banana', 2000, 'Cleaning').
+product('Empanda', 5000, 'Food').
+product('Coffee', 3000, 'Food').
+product('Aromatica', 2000, 'Food').
+product('Pan', 10000, 'Food').
+product('Donut', 10000, 'Food').
